@@ -2,22 +2,33 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="/js/index.js" type="module"></script>
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>SPA</title>
+
 </head>
 
 <body>
     <nav>
-        <a href="/" onclick="route()">Home</a>
-        <a href="/about" onclick="route()">Sobre</a>
-        <a href="/404" onclick="route()">404</a>
+        <menu>
+            <li><img src="./assets/logo.svg" alt=""></li>
+
+            <li><a class="menuSelected" id="home" href="/"  onclick="route()">Home</a></li>
+            <li><a id="universo" href="/universo" onclick="route()">O Universo</a></li>
+            <li><a id="exploracao" href="/exploracao" onclick="route()">Exploração</a></li>
+        </menu>
     </nav>
 
     <div id="app"></div>
 
-    <script src="/js/index.js" type="module"></script>
 </body>
 
 </html>
