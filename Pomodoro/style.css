@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --base-color: 194;
+
+  --bg-color-dark: #121214;
+  --bg-color-light: white;
+
+  --bg-card-primary:hsla(240, 9%, 89%, 1);
+  --bg-card-secondary:hsla(194, 97%, 31%, 1);
+
+  --primary-stroke: hsl(240, 6%, 21%);
+  --secondary-stroke:  hsl(0, 0%, 100%);
+
+  --text-color: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: white;
+  color: #121214;
+
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  display: grid;
+  align-items: end;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+#timer {
+  font-size: 12.6rem;
+  font-weight: 500;
+
+  display: flex;
+  margin-bottom: 4.8rem;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4rem;
+
+  border-radius: 9999px; /* Border Pill */
+}
+
+#controls button {
+    width: 4.8rem;
+}
+
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+svg path {
+  fill: var(--primary-stroke);
+}
+
+.hide {
+  display: none;
+}
+
+#sound_cards {
+  display: flex;
+  flex-flow: wrap;
+
+  gap: 3.2rem;
+
+  width: 35rem;
+}
+
+.card {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  background-color: var(--bg-card-primary);
+  border-radius: 2.4rem;
+}
+
+.clicked {
+  background-color: var(--bg-card-secondary);
+}
+
+.clicked svg path {
+    fill: var(--secondary-stroke);
+}
+
+footer {
+  align-self: end;
+  justify-self: end;
+
+  padding: 0 4rem 3.2rem 0;
+}
