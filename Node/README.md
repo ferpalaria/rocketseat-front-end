@@ -12,6 +12,7 @@
 - sqilite: responsável por conecatar
 - node path: resolve o path dos arquivos (não precisa instalar, vem junto com o node)
 - bcryptjs: encriptografa senhas para inserção no banco 
+- knex.js: ORM - query builder
 
 ## Estrutura do projeto 
 ```
@@ -126,4 +127,23 @@ Boas práticas em BD:
 ?? -> nulish operator 
 ````
 name = user.name ?? name;
+````
+
+### Arquivo de configuração do Knex
+````
+npx knex init
+````
+
+### Migration
+Forma de versionar o banco de dados 
+- método UP: responsável por criar ou alterar algo no banco
+- método DOWN: responsável pelo rollback. Ou seja, desfazer as alterações realizadas pela migration
+
+### Rodando migrations
+````
+npx knex migrate:make createNotes
+````
+### Rodando migrations 
+````
+npx knex migrate:latest
 ````
