@@ -121,3 +121,9 @@ Boas práticas em BD:
 - tipos das colunas em caixa alta
 - query em caixa alta
 - nome de coluna separada por _
+
+
+?? -> nulish operator 
+````
+name = user.name ?? name;
+````
