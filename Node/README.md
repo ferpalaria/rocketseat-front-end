@@ -147,3 +147,6 @@ npx knex migrate:make createNotes
 ````
 npx knex migrate:latest
 ````
+
+### .onDelete("CASCADE")
+Estrategia usada dentro da migration para deletar o registro caso a primarykey for deletada. Por exemplo tenho uma nota do usuário Pedro, quando Pedro for deletado eu deleto junto a nota dele. Garantindo CONSISTÊNCIA
