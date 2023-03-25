@@ -10,7 +10,8 @@
 - express-async-erros: tratamento de excessões
 - sqlite3: drive de conexão, estabelecer comunicação com a base de dados
 - sqilite: responsável por conecatar
-- node path: resolve o path dos arquivos
+- node path: resolve o path dos arquivos (não precisa instalar, vem junto com o node)
+- bcryptjs: encriptografa senhas para inserção no banco 
 
 ## Estrutura do projeto 
 ```
