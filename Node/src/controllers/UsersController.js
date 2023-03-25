@@ -7,9 +7,14 @@ class UsersController {
     async create(request, response) {
         const { name, email, pass } = request.body;
 
-        if (!name) throw new AppError("Nome é obrigatório")
+        const database = await sqliteConnection();
+        const chackUserExists = await database.get("SELECT * FROM users WHERE email = (?)", [email]);
 
-        response.status(201).json({ name, email });
+        if (chackUserExists) {
+            throw new AppError("Este e-mail já existe");
+        }
+
+        return response.status(201).json();
     }
 }
 
