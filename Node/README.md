@@ -150,3 +150,14 @@ npx knex migrate:latest
 
 ### .onDelete("CASCADE")
 Estrategia usada dentro da migration para deletar o registro caso a primarykey for deletada. Por exemplo tenho uma nota do usuário Pedro, quando Pedro for deletado eu deleto junto a nota dele. Garantindo CONSISTÊNCIA
+
+### Spread ("...")
+Ele basicamente permite que expressões expandam o conteúdo de arrays em locais onde múltiplos elementos são esperados
+````
+nomes =["José, Maria, Pedro"]
+func({
+  ...nomes,
+  cidade
+})
+````
+
