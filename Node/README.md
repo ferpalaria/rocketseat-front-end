@@ -16,20 +16,36 @@
 
 ## Estrutura do projeto 
 ```
-.
 ├── README.md
-├── controllers
-├── database
-│   └── sqlite
-│       └── migrations
+├── knexfile.js
 ├── package-lock.json
 ├── package.json
-├── routes => Rotas do projeto
-│   ├── index.js
-│   └── users.routes.js
-├── src => Arquivo principal, onde temos configs de host e porta, e onde estão as rotas
-│   └── server.js
-└── utils
+└── src
+    ├── controllers
+    │   ├── NotesController.js
+    │   ├── TagsController.js
+    │   └── UsersController.js
+    ├── database
+    │   ├── database.db
+    │   ├── knex
+    │   │   ├── index.js
+    │   │   └── migrations
+    │   │       ├── 20230325212555_createNotes.js
+    │   │       ├── 20230325221458_createTags.js
+    │   │       └── 20230325222022_createLinks.js
+    │   └── sqlite
+    │       ├── index.js
+    │       └── migrations
+    │           ├── createUsers.js
+    │           └── index.js
+    ├── routes
+    │   ├── index.js
+    │   ├── notes.routes.js
+    │   ├── tags.routes.js
+    │   └── users.routes.js
+    ├── server.js
+    └── utils
+        └── AppError.js
 ```
 ## Anotações sobre a aula
 
